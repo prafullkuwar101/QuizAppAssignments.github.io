@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.homepage{
+    font-family: Poppins, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 50px;
+    border: 2px solid lightgrey;    
+    border-radius: 7px;
+    width: 70%;
+    min-width: 280px;
+    margin-left: 15%;
+    margin-right: 15%;        
+}
+
+/* media queries for quiz screen------- */
+@media screen and (max-width: 480px) {
+    .homepage{
+        width: 100%;
+        margin: 0px;
+    }
+    .button{
+        font-size: 18px;
+    }    
+}
+.logo_icon img{
+    margin-top: 10px;    
+    width: calc(13% + 30px);
+    height: calc(13% + 30px);
+}
+.major_title{
+    font-size: calc(10px + 4.1vw);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #30aed5;
+    margin-top: 2vh;
+    margin-bottom: 15px;
+}
+.imp_details{
+    font-size: calc(10px + 1.5vw);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#name_text{
+    font-size: calc(10px + 1vw);
+    padding: 10px;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    width: 60%;
+    min-width: 250px;
+    margin: 10px;
+}
+#enter_btn{    
+    font-size: calc(10px + 1vw);
+    padding: 12px 5px 12px 5px;
+    margin: 5px;
+    background-color: #48c9f0;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    width: 20%;
+    min-width: 200px;
+}
+#enter_btn:hover{
+    background-color: rgb(101, 100, 100);
+    color: white;       
+}
+#notice{
+    font-size: calc(10px + 1vw);
+    color: gray;
+    margin: 10px;
+    padding-bottom : 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+#options{
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid rgb(81, 170, 225);
+    border-radius: 5px;
+    padding: 10px 2px;
+    color: gray;
+    margin: 10px;    
+    width: 40%;
+    min-width: 240px;
+    min-height: 5vh;
+    box-shadow: none;
+    background-color: rgba(237, 251, 255, 0.709);
+}
+
+.options{
+    color: gray;
+    background-color: rgba(237, 251, 255, 0.709);
+}
+#options:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #65d8fb;
+}
+
+
+
+
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title  -->
+    <title>Problems on Ages</title>
+
+    <!--Favicon Logo Image-->
+    <link rel="icon" href="favicon.jpg" type="jpg/img">
+
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="questionstyle.css" type="text/css">
+</head>
+
+
+
+
+<body>
+<!-- Main Homepage div section -------------------------->
+    <div class="homepage">
+
+    <!-- Question Category_Title -->
+    <h1 id="category_name">Problems on Ages</h1> 
+
+    <!-- Timer and Score appeared here -->
+    <div class="time_score">
+        <div class="timer"><span id="timer">300</span></div>
+        <div class="score"><span id="score">SCORE : 0</span></div>        
+    </div>
+
+    <!-- Question and Option Section  ------------------->
+    <div class="Qn_Section>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               " id="item">
+        
+      <!-- Question Number -->
+        <div class="question_number"  name="question_number">
+          <p id="question_number"></p>
+        </div>
+
+        <!-- Question field-->
+        <p id="question" name="question">Question goes here</p>
+                   
+        <!-- Options field buttons -->
+        <div class="option_field">
+        <div class="answer-buttons" id="answer-buttons">
+            <button class="btn" type="button" id="option1"></button>
+            <button class="btn" type="button" id="option2"></button>            
+            <button class="btn" type="button" id="option3"></button>
+            <button class="btn" type="button" id="option4"></button>                    
+        </div>
+
+        <!-- Next Question  -->
+        <div class="nextQn">
+            <button class="nextBtn" type="button" id="next-btn" onclick="nextQuestion()"></button>
+        </div>
+
+        </div>
+    </div>
+    </div>    
+
+
+<script>
+    
+       
+    const questions = [
+    { 
+        
+        question : "John is 5 years older than Mary, who is 10 years old. How old is John?",
+        answers : [
+        { text: "15", correct: true},
+        { text: "10",  correct: false},
+        { text: "12", correct: false},
+        { text: "5", correct: false},
+      ]   
+      
+    },
+
+    {
+        question : "If Sally is 12 years old and her brother is twice her age, how old is her brother?",
+        answers : [
+        { text: "14", correct: false},
+        { text: "24", correct: true },
+        { text: "26", correct: false},
+        { text: "12", correct: false},
+      ]  
+    },
+
+    {
+
+        question : "If the sum of the ages of a father and his son is 60 years and the father is twice as old as his son, how old is the father?",
+        answers : [
+        { text: "40", correct: false},
+        { text: "30", correct: false},
+        { text: "50", correct: true},
+        { text: "20", correct: false},
+      ]  
+    },
+
+    { 
+        question : "Emily is 3 times older than her sister Grace. If Emily is 21 years old, how old is Grace?",
+        answers : [
+        { text: "7", correct: true},
+        { text: "14",  correct: false},
+        { text: "6", correct: false},
+        { text: "18", correct: false},
+      ]   
+      
+    },
+
+    {
+        question : "If the sum of the ages of Tom and Jerry is 30 years and Tom is twice as old as Jerry, how old is Jerry?",
+        answers : [
+        { text: "10", correct: false},
+        { text: "15", correct: false },
+        { text: "20", correct: false},
+        { text: "12", correct: true},
+      ]  
+    },
+
+    {
+        question : "The ratio of the ages of two friends is 3:5. If the older friend is 25 years old, how old is the younger friend?",
+        answers : [
+        { text: "15", correct: true},
+        { text: "10",  correct: false},
+        { text: "20", correct: false},
+        { text: "18", correct: false},
+      ]  
+    },
+
+    { 
+        question : "The average age of a family of five members is 30 years. If the ages of four of them are 28, 30, 32, and 34 years, what is the age of the fifth member?",
+        answers : [
+        { text: "26", correct: false},
+        { text: "28",  correct: true},
+        { text: "30", correct: false},
+        { text: "32", correct: false},
+      ]   
+      
+    },
+
+    {
+        question : "Sarah is twice as old as her sister Hannah. If Hannah is 10 years old, how old is Sarah?",
+        answers : [
+        { text: "10", correct: false},
+        { text: "20", correct: true },
+        { text: "30", correct: false},
+        { text: "40", correct: false},
+      ]  
+    },
+
+    {
+        question : "The age of a mother is three times the age of her son. If the son is 12 years old, how old is the mother?",
+        answers : [
+        { text: "36", correct: true},
+        { text: "24", correct: false },
+        { text: "48", correct: false},
+        { text: "30", correct: false},
+      ]  
+    },
+
+    {
+
+        question : "The sum of the ages of a grandfather and his grandson is 72 years. If the grandfather is 4 times as old as his grandson, how old is the grandson?",
+        answers : [
+        { text: "18", correct: false},
+        { text: "16", correct: false },
+        { text: "12", correct: false},
+        { text: "14", correct: true},
+      ]  
+    }
+  
+];
+
+
+</script>  
+
+
+<script src="script.js"></script>  
+</body>
+</html>

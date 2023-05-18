@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title  -->
+    <title>QuizSite</title>
+
+    <!--Favicon Logo Image-->
+    <link rel="icon" href="favicon.jpg" type="jpg/img">
+    
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    
+</head>
+<body>
+  <!-- Main Homepage div section -->
+        <div class="homepage">
+            <!--QuizApp_Logo -->
+            <div class="logo_icon">
+                <img src="testbook_logo.jpg" alt="Testbook">
+            </div>
+
+            <!-- Hello User and welcome username appears here -->
+            <div class="major_title" id="displayName">Hello User</div>
+
+            <!-- Guiding instructions appear here for user -->
+            <p class="imp_details">
+                <span>Enter your name to continue the Quiz.</span>
+            </p>
+
+            <!-- User Name Input form -->            
+            <form class="welcome_form" id="username" name="welcome_form" onsubmit="submitForm(event)">
+                <input id="name_text" name="name" type="text" placeholder="ENTER YOUR NAME..." required>
+                <button type="submit" id="enter_btn" name="ENTER" onclick="showUserName()">ENTER</button>
+            </form>
+
+            <!-- Important notice appear here for user -->
+            <p id="notice">You'll have 10 seconds to answer each questions</p>
+
+            <!-- Quiz Category Selection section -->
+            <p class="major_title">Select Category</p>
+
+            <div class="option_field">
+                <button class="options" type="button" id="options" onclick = "window.location.href='PipesCisterns.html';">Pipes And Cisterns</button>
+                <button class="options" type="button" id="options" onclick = "window.location.href='Probability.html';">Probablity</button>            
+                <button class="options" type="button" id="options" onclick = "window.location.href='AgeProb.html';">Problem on Ages</button>
+                <button class="options" type="button" id="options" onclick = "window.location.href='ProfitLoss.html';">Profit And Loss</button>
+            </div>              
+        </div>     
+    
+    <!--  javascript file attached here -->
+    <script src="script.js"></script>  
+    
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title  -->
+    <title>Pipes and Cisterns Problems</title>
+
+    <!--Favicon Logo Image-->
+    <link rel="icon" href="favicon.jpg" type="jpg/img">
+
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="questionstyle.css" type="text/css">
+</head>
+
+
+<body>
+  <!-- Main Homepage div section -------------------------->
+    <div class="homepage">
+
+        <!-- Question Category_Title -->
+        <h1 id="category_name">Pipes and Cisterns</h1> 
+    
+        <!-- Timer and Score appeared here -->
+        <div class="time_score">
+            <div class="timer"><span id="timer">300</span></div>
+            <div class="score"><span id="score">SCORE : 0</span></div>
+        </div>   
+        
+        <!-- Question and Option Section  ------------------->
+        <div class="Qn_Section>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               " id="item">
+                
+            <!-- Question Number -->
+            <div class="question_number"  name="question_number">
+              <p id="question_number"></p>
+            </div>
+    
+            <!-- Question field-->
+            <p id="question" name="question">Question goes here</p>
+                       
+    
+            <!-- Options field buttons -->
+            <div class="option_field">
+            <div class="answer-buttons" id="answer-buttons">
+                <button class="btn" type="button" id="option1"></button>
+                <button class="btn" type="button" id="option2"></button>            
+                <button class="btn" type="button" id="option3"></button>
+                <button class="btn" type="button" id="option4"></button>                    
+            </div>
+
+            <!-- Next Question  -->
+            <div class="nextQn">
+                <button class="nextBtn" type="button" id="next-btn" onclick="nextQuestion()"></button>
+            </div>
+    
+            </div>
+        </div>
+        </div>    
+    
+    
+    <script>
+        
+           
+        const questions = [
+        { 
+            
+            question : "A pipe can fill a tank in 4 hours. Another pipe can empty the same tank in 6 hours. If both pipes are opened simultaneously, how long will it take to fill the tank?",
+            answers : [
+            { text: "2 Hours", correct: false},
+            { text: "6 Hours",  correct: false},
+            { text: "12 Hours", correct: true},
+            { text: "24 Hours", correct: false},
+          ]   
+          
+        },
+    
+        {
+            question : "Two pipes can fill a tank in 5 hours and 6 hours respectively. If both pipes are opened simultaneously, how long will it take to fill the tank?",
+            answers : [
+            { text: "2.5 Hours", correct: false},
+            { text: "3 Hours",  correct: true},
+            { text: "4 Hours", correct: false},
+            { text: "5 Hours", correct: false},
+          ]  
+        },
+    
+        {
+    
+            question : "A tap can fill a tank in 12 hours. A leak in the tank can empty the same tank in 18 hours. If both tap and leak are opened simultaneously, how long will it take to fill the tank?",
+            answers : [
+            { text: "36 Hours", correct: true},
+            { text: "24 Hours",  correct: false},
+            { text: "18 Hours", correct: false},
+            { text: "16 Hours", correct: false},
+          ]  
+        },
+    
+        { 
+            question : "A pipe can fill a tank in 8 hours. Another pipe can fill the same tank in 12 hours. If both pipes are opened simultaneously and after 2 hours, the first pipe is closed, how long will it take to fill the tank?",
+            answers : [
+            { text: "5 Hours", correct: false},
+            { text: "6 Hours",  correct: true},
+            { text: "5.5 Hours", correct: false},
+            { text: "6.5 Hours", correct: false},
+          ]   
+          
+        },
+    
+        {
+            question : "A pipe can fill a tank in 10 hours. A leak in the tank can empty the same tank in 20 hours. If both pipe and leak are opened simultaneously, how long will it take to fill the tank?",
+            answers : [
+            { text: "20 Hours", correct: false},
+            { text: "25 Hours",  correct: false},
+            { text: "33 Hours", correct: true},
+            { text: "50 Hours", correct: false},
+          ]  
+        },
+    
+        {
+            question : "A tank can be filled by two taps A and B in 5 hours and 7 hours respectively. A third tap C can empty the same tank in 10 hours. If all three taps are opened simultaneously, how long will it take to fill the tank?",
+            answers : [
+            { text: "10 Hours", correct: false},
+            { text: "15 Hours",  correct: true},
+            { text: "20 Hours", correct: false},
+            { text: "25 Hours", correct: false},
+          ]  
+        },
+    
+        { 
+            question : "A tank can be filled by two pipes A and B in 6 hours and 9 hours respectively. If both pipes are opened simultaneously, how long will it take to fill half of the tank?",
+            answers : [
+            { text: "3 Hours", correct: false},
+            { text: "3.5 Hours",  correct: false},
+            { text: "4 Hours", correct: true},
+            { text: "4.5 Hours", correct: false},
+          ]   
+          
+        },
+    
+        {
+            question : "A pipe can fill a tank in 8 hours. Due to a leak, it takes 12 hours to fill the same tank. How long will the leak take to empty the full tank?",
+            answers : [
+            { text: "24 Hours", correct: false},
+            { text: "36 Hours",  correct: true},
+            { text: "48 Hours", correct: false},
+            { text: "60 Hours", correct: false},
+          ]  
+        },
+    
+        {
+            question : "A tap can fill a tank in 8 hours. Another tap can fill the same tank in 12 hours. A third tap can empty the tank in 24 hours. If all three taps are opened simultaneously, how long will it take to fill the tank?",
+            answers : [
+            { text: "2 Hours", correct: false},
+            { text: "16 Hours",  correct: true},
+            { text: "12 Hours", correct: false},
+            { text: "24 Hours", correct: false},
+          ]  
+        },
+    
+        {
+    
+            question : "A tank can be filled by a pipe A in 8 hours. Due to a leak, it takes 10 hours to fill the same tank. How long will it take for the leak to empty the tank completely?",
+            answers : [
+            { text: "24 Hours", correct: false},
+            { text: "40 Hours",  correct: false},
+            { text: "48 Hours", correct: true},
+            { text: "64 Hours", correct: false},
+          ]  
+        }
+      
+    ];
+    
+    
+    </script>  
+    
+    
+    <script src="script.js"></script>  
+    </body>
+</html>

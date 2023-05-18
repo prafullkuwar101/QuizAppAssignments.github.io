@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title  -->
+    <title>Problems on Probability</title>
+
+    <!--Favicon Logo Image-->
+    <link rel="icon" href="favicon.jpg" type="jpg/img">
+
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="questionstyle.css" type="text/css">
+</head>
+
+
+
+
+<body>
+  <!-- Main Homepage div section -------------------------->
+    <div class="homepage">
+
+    <!-- Question Category_Title -->
+    <h1 id="category_name">Problems on Probability</h1> 
+
+    <!-- Timer and Score appeared here -->
+    <div class="time_score">
+        <div class="timer"><span id="timer">300</span></div>
+        <div class="score"><span id="score">SCORE : 0</span></div>
+        
+    </div>
+
+    <!-- Question and Option Section  ------------------->
+    <div class="Qn_Section>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               " id="item">
+        
+      <!-- Question Number -->
+        <div class="question_number"  name="question_number">
+          <p id="question_number"></p>
+        </div>
+
+        <!-- Question field-->
+        <p id="question" name="question">Question goes here</p>
+                   
+
+        <!-- Options field buttons -->
+        <div class="option_field">
+        <div class="answer-buttons" id="answer-buttons">
+            <button class="btn" type="button" id="option1"></button>
+            <button class="btn" type="button" id="option2"></button>            
+            <button class="btn" type="button" id="option3"></button>
+            <button class="btn" type="button" id="option4"></button>                    
+        </div>
+
+        <!-- Next Question  -->
+        <div class="nextQn">
+            <button class="nextBtn" type="button" id="next-btn" onclick="nextQuestion()"></button>
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+    
+
+
+<script>
+    
+       
+    const questions = [
+    { 
+        
+        question : "A dice is rolled twice. What is the probability of getting a sum of 7?",
+        answers : [
+        { text: "1/6", correct: false},
+        { text: "1/9",  correct: false},
+        { text: "112", correct: false},
+        { text: "1/36", correct: true},
+      ]   
+      
+    },
+
+    {
+        question : "A bag contains 5 red balls and 3 green balls. If two balls are drawn randomly, what is the probability that both are red?",
+        answers : [
+        { text: "1/8", correct: false},
+        { text: "5/12", correct: true },
+        { text: "5/8", correct: false},
+        { text: "7/12", correct: false},
+      ]  
+    },
+
+    {
+
+        question : "A card is drawn from a deck of 52 cards. What is the probability of getting a face card (jack, queen, or king)?",
+        answers : [
+        { text: "1/4", correct: false},
+        { text: "3/13", correct: false},
+        { text: "1/13", correct: false},
+        { text: "4/13", correct: true},
+      ]  
+    },
+
+    { 
+        question : "Two dice are rolled. What is the probability of getting a sum of 5 or 7?",
+        answers : [
+        { text: "1/4", correct: false},
+        { text: "1/6",  correct: true},
+        { text: "1/9", correct: false},
+        { text: "1/12", correct: false},
+      ]   
+      
+    },
+
+    {
+        question : "A coin is tossed 3 times. What is the probability of getting exactly 2 heads?",
+        answers : [
+        { text: "1/8", correct: false},
+        { text: "3/8", correct: true },
+        { text: "1/4", correct: false},
+        { text: "3/4", correct: false},
+      ]  
+    },
+
+    {
+        question : "A jar contains 10 red marbles and 6 blue marbles. Two marbles are drawn randomly without replacement. What is the probability that both are blue?",
+        answers : [
+        { text: "3/34", correct: true},
+        { text: "5/16",  correct: false},
+        { text: "3/20", correct: false},
+        { text: "1/10", correct: false},
+      ]  
+    },
+
+    { 
+        question : "A bag contains 4 red balls, 5 blue balls and 3 green balls. If one ball is drawn at random, what is the probability of getting a blue or green ball?",
+        answers : [
+        { text: "4/12", correct: false},
+        { text: "5/12",  correct: false},
+        { text: "8/12", correct: true},
+        { text: "10/12", correct: false},
+      ]   
+      
+    },
+
+    {
+        question : "A box contains 8 red balls and 6 green balls. If 2 balls are drawn at random, what is the probability of getting 1 red ball and 1 green ball?",
+        answers : [
+        { text: "5/28", correct: false},
+        { text: "7/24", correct: true },
+        { text: "7/12", correct: false},
+        { text: "3/7", correct: false},
+      ]  
+    },
+
+    {
+        question : "A bag contains 3 red balls, 2 blue balls and 1 green ball. If two balls are drawn at random without replacement, what is the probability that both are red?",
+        answers : [
+        { text: "1/6", correct: false},
+        { text: "1/4", correct: true },
+        { text: "1/3", correct: false},
+        { text: "1/2", correct: false},
+      ]  
+    },
+
+    {
+
+        question : "A class consists of 20 boys and 30 girls. If a student is selected at random, what is the probability of selecting a girl?",
+        answers : [
+        { text: "1/2", correct: false},
+        { text: "2/3", correct: false },
+        { text: "3/5", correct: true},
+        { text: "5/8", correct: false},
+      ]  
+    }
+  
+];
+
+
+</script>  
+
+
+<script src="script.js"></script>  
+</body>
+</html>

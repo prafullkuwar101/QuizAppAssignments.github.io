@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title  -->
+    <title>Problems on Profit & Loss</title>
+
+    <!--Favicon Logo Image-->
+    <link rel="icon" href="favicon.jpg" type="jpg/img">
+
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="questionstyle.css" type="text/css">
+</head>
+
+
+
+
+<body>
+<!-- Main Homepage div section -------------------------->
+    <div class="homepage">
+
+    <!-- Question Category_Title -->
+    <h1 id="category_name">Profit & Loss</h1> 
+
+    <!-- Timer and Score appeared here -->
+    <div class="time_score">
+        <div class="timer"><span id="timer">300</span></div>
+        <div class="score"><span id="score">SCORE : 0</span></div>
+        
+    </div>
+
+    <!-- Question and Option Section  ------------------->
+    <div class="Qn_Section>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               " id="item">
+        
+      <!-- Question Number -->
+        <div class="question_number"  name="question_number">
+          <p id="question_number"></p>
+        </div>
+
+        <!-- Question field-->
+        <p id="question" name="question">Question goes here</p>
+                   
+        <!-- Options field buttons -->
+        <div class="option_field">
+        <div class="answer-buttons" id="answer-buttons">
+            <button class="btn" type="button" id="option1"></button>
+            <button class="btn" type="button" id="option2"></button>            
+            <button class="btn" type="button" id="option3"></button>
+            <button class="btn" type="button" id="option4"></button>                    
+        </div>
+
+        <!-- Next Question  -->
+        <div class="nextQn">
+            <button class="nextBtn" type="button" id="next-btn" onclick="nextQuestion()"></button>
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+    
+
+
+<script>
+    
+       
+    const questions = [
+    { 
+        
+        question : "A shopkeeper buys a pen for Rs. 30 and sells it for Rs. 40. What is his profit percentage?",
+        answers : [
+        { text: "10 %", correct: false},
+        { text: "25 %",  correct: false},
+        { text: "33.33 %", correct: true},
+        { text: "40 %", correct: false},
+      ]   
+      
+    },
+
+    {
+        question : "A trader bought a car for Rs. 5 lakhs and sold it for Rs. 6 lakhs. What is his profit percentage?",
+        answers : [
+        { text: "10 %", correct: false},
+        { text: "15 %",  correct: false},
+        { text: "20 %", correct: true},
+        { text: "25 %", correct: false},
+      ]  
+    },
+
+    {
+
+        question : "A person sells a laptop for Rs. 40,000, which was bought for Rs. 50,000. What is his loss percentage?",
+        answers : [
+        { text: "10 %", correct: false},
+        { text: "15 %",  correct: false},
+        { text: "20 %", correct: true},
+        { text: "25 %", correct: false},
+      ]  
+    },
+
+    { 
+        question : "A shopkeeper bought a mobile phone for Rs. 8,000 and sold it for Rs. 10,000. What is his profit percentage?",
+        answers : [
+        { text: "10 %", correct: false},
+        { text: "20 %",  correct: true},
+        { text: "25 %", correct: false},
+        { text: "30 %", correct: false},
+      ]   
+      
+    },
+
+    {
+        question : "A person sold a watch for Rs. 1,200 at a loss of 20%. What is the cost price of the watch?",
+        answers : [
+        { text: "Rs. 960", correct: false},
+        { text: "Rs. 1000", correct: false },
+        { text: "Rs. 1200", correct: false},
+        { text: "Rs. 1500", correct: true},
+      ]  
+    },
+
+    {
+        question : "A trader sold a bike for Rs. 70,000 and gained 16 2/3%. What is the cost price of the bike?",
+        answers : [
+        { text: "Rs. 58,000", correct: false},
+        { text: "Rs. 60,000",  correct: true},
+        { text: "Rs. 62,000", correct: false},
+        { text: "Rs. 64,000", correct: false},
+      ]  
+    },
+
+    { 
+        question : "A shopkeeper sold a TV for Rs. 25,000 and gained 20%. What is the cost price of the TV?",
+        answers : [
+        { text: "Rs. 20,000", correct: false},
+        { text: "Rs. 21,000",  correct: false},
+        { text: "Rs. 22,000", correct: true},
+        { text: "Rs. 23,000", correct: false},
+      ]  
+    
+    },
+
+    {
+        question : "A person sold a camera for Rs. 10,000 at a loss of 20%. What is the cost price of the camera?",
+        answers : [
+        { text: "Rs. 8,000", correct: false},
+        { text: "Rs. 9,000", correct: false },
+        { text: "Rs. 10,000", correct: false},
+        { text: "Rs. 12,500", correct: true},
+      ]  
+    },
+
+    {
+        question : "A shopkeeper marked the price of a book 25% above the cost price. If he gives a discount of 10%, what is his profit percentage?",
+        answers : [
+        { text: "15 %", correct: false},
+        { text: "12.5%", correct: true },
+        { text: "11.11%", correct: false},
+        { text: "10 %", correct: false},
+      ]  
+    },
+
+    {
+
+        question : "A trader bought a refrigerator for Rs. 30,000 and sold it for Rs. 25,000. What is his loss percentage?",
+        answers : [
+        { text: "10 %", correct: false},
+        { text: "12.5 %", correct: false },
+        { text: "16.67 %", correct: true},
+        { text: "20 %", correct: false},
+      ]  
+    }
+  
+];
+
+
+</script>  
+
+
+<script src="script.js"></script>  
+</body>
+</html>

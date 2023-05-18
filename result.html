@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title  -->
+    <title>Result Page</title>
+
+    
+    <!--Favicon Logo Image-->
+    <link rel="icon" href="favicon.jpg" type="jpg/img">
+
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="questionstyle.css" type="text/css">
+</head>
+
+
+<body>
+    <!-- RESULT PAGE STRUCTURE ----------------->    
+    <div class="result_page">
+
+        <!-- Quiz Heading -->
+        <h1 id="result_title">Quiz Result</h1>
+        
+        <!-- User Name and Various Result Parameters appear here-->
+        <div class="result_content">
+
+          <!-- Candidate Name -->
+          <div class="parameter_result">
+            <div class="gray_highlights">Student Name</div>
+            <div class="separator">:</div>
+            <div class="bold_highlights"><p id="candidate_name"></p></div>
+          </div>
+
+          <!-- Total taken time by candidate in seconds-->
+          <div class="parameter_result">
+            <div class="gray_highlights">Total Time Taken </div>
+            <div class="separator">:</div>
+            <div class="bold_highlights"><p id="time_taken"></p></div>
+          </div>
+
+
+          <!-- No. of total Questions -->
+          <div class="parameter_result">
+            <div class="gray_highlights">Total Questions</div>
+            <div class="separator">:</div>
+            <div id="totalQuestion" class="bold_highlights"></div>
+          </div>
+
+          <!-- No. of total Attempted Questions -->
+          <div class="parameter_result">
+            <div class="gray_highlights">Attempted Question</div>
+            <div class="separator">:</div>
+            <div id="attemptQuestion" class="bold_highlights">0</div>
+          </div>
+
+          <!-- No. of Correct answered Questions -->
+          <div class="parameter_result">
+            <div class="gray_highlights">Correct Questions </div>
+            <div class="separator">:</div>
+            <div class="bold_highlights"><p id="correctQuestion">0</p></div>
+          </div>
+
+          <!-- No. of Wrong answered Questions -->
+          <div class="parameter_result">
+            <div class="gray_highlights" id="wrong">Wrong Questions </div>
+            <div class="separator">:</div>
+            <div class="bold_highlights"><p id="wrongQuestion">0</p></div>
+          </div>
+
+          <!-- Marks in Percentage (%) -->
+          <div class="parameter_result">
+            <div class="gray_highlights">Percentage </div>
+            <div class="separator">:</div>
+            <div id="score" class="bold_highlights"></div>
+          </div>
+
+
+
+        </div>
+
+
+        <!-- Restart Quiz or Go to Home Section option appear here  -->
+        <div class="Restart_quiz">
+            <button type="button" id="start_again" onclick= "location.href='AgeProb.html'; removeData()">Start Again</button>
+
+            <button type="button" id="go_HomePage" onclick = "window.location.href='index.html'; clearData()">Go to Home</button>
+        </div>
+        
+        </div>
+
+    
+
+
+    <script>
+      
+      let currentQuestionIndex = 0;
+      
+      let name = sessionStorage.getItem("name");
+      let score = sessionStorage.getItem("score");
+      let time = sessionStorage.getItem("timer");
+      let timetaken = sessionStorage.getItem("timetaken");
+      let correctAnswer = sessionStorage.getItem("correctAns");
+      let wrongAnswer = sessionStorage.getItem("wrongAns");
+      let attemptQuestion = sessionStorage.getItem("attemptQn");
+      let totalQuestionLength = sessionStorage.getItem("questionNumber");
+
+            
+      
+      document.getElementById("candidate_name").innerHTML = name;
+      document.getElementById("score").innerHTML = score;
+      document.getElementById("time_taken").innerHTML = timetaken ;
+      document.getElementById("correctQuestion").innerHTML = correctAnswer;
+      document.getElementById("wrongQuestion").innerHTML = wrongAnswer;
+      document.getElementById("attemptQuestion").innerHTML = attemptQuestion;
+      document.getElementById("totalQuestion").innerHTML = totalQuestionLength; 
+      
+      function removeData() {
+        sessionStorage.removeItem("score");
+        sessionStorage.removeItem("attemptQn");
+        sessionStorage.removeItem("correctAns");
+        sessionStorage.removeItem("wrongAns");
+        sessionStorage.removeItem("timetaken");
+      };
+
+      function clearData() {
+      sessionStorage.clear();
+      };
+      
+      
+    </script>
+    <script src="script.js"></script>      
+</body>
+</html>
